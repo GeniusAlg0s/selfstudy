@@ -23,4 +23,4 @@ def animate(i):  # update the y values (every 1000ms)
 init()
 for i in range(100):
     animate(i)
-    time.sleep(6)
+    time.sleep(1)
