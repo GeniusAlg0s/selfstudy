@@ -1,16 +1,8 @@
-
-import pandas as pd
 import streamlit as st
 import altair as alt
-import csv
-import numpy as np
 from vega_datasets import data
-from urllib.error import URLError
-
-
-       
+  
 st.title('SELF STUDY')
-
 
 st.title('using streamlit data to enter into web form and return it on the page \n no need for shbang line as you can run with streamlit run <file>')
 
