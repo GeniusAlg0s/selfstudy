@@ -8,7 +8,7 @@ from vega_datasets import data
 from urllib.error import URLError
 
 
-
+       
 st.title('SELF STUDY')
 
 
@@ -22,29 +22,29 @@ name = st.text_input("Enter your name:")
 age = st.slider("what month where you born in:", min_value=1, max_value=12)
 stone = ""
 if age == 1:
-       stone = "Garnet"
+      stone = "Garnet"
 elif age == 2:
-       stone = "Amethyst"
+      stone = "Amethyst"
 elif age == 3:
-       stone = "Aquamarine"
+      stone = "Aquamarine"
 elif age == 4:
-       stone = "Diamond"
+      stone = "Diamond"
 elif age == 5:
-       stone = "Emerald"
+      stone = "Emerald"
 elif age == 6:
-       stone = "Pearl"
+      stone = "Pearl"
 elif age == 7:
-       stone = "Ruby"
+      stone = "Ruby"
 elif age == 8:
-       stone = "Peridot"
+      stone = "Peridot"
 elif age == 9:
-       stone = "Sapphire"
+      stone = "Sapphire"
 elif age == 10:
-       stone = "Opal"
+      stone = "Opal"
 elif age == 11:
-       stone = "Topaz"
+      stone = "Topaz"
 elif age == 12:
-       stone = "Zircon"
+      stone = "Zircon"
 
 
 
@@ -54,21 +54,21 @@ st.title('Legacy Car data by the biggest car producers Europe Japan USA')
 cars = data.cars()
 
 ca= alt.Chart(cars).mark_point().encode(
-    x='Cylinders',
-    y='Acceleration',
-    color='Origin',
+   x='Cylinders',
+   y='Acceleration',
+   color='Origin',
    shape='Origin'
 )
 md= alt.Chart(cars).mark_point().encode(
-    x='Miles_per_Gallon',
-    y='Displacement',
-    color='Origin',
+   x='Miles_per_Gallon',
+   y='Displacement',
+   color='Origin',
    shape='Origin'
 )
 wa= alt.Chart(cars).mark_point().encode(
-    x='Weight_in_lbs',
-    y='Acceleration',
-    color='Origin',
+   x='Weight_in_lbs',
+   y='Acceleration',
+   color='Origin',
    shape='Origin'
 )
 bbr= alt.vconcat(
