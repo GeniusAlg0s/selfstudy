@@ -7,11 +7,12 @@ from vega_datasets import data
 import pandas as pd
 from PIL import Image
 
+st.title('SELF STUDY')
 
 st.title('animation')
 img= Image.open('bald_eagle.png')
 
-st.image(img,width=100)
+st.image(img,width=200 )
 
 st.markdown("here is a away to get the equivalent of a an html <p>elemnt</p> here we \n are taking data from a json file and displaying the contents in an animated fashion \n still working on making it pretty at the end you should see some baloons")
 cars = data.cars()
@@ -24,15 +25,17 @@ ucars = cars.loc[cars['Origin'] == 'USA']
 jcars = cars.loc[cars['Origin'] == 'Japan']
 ecars = cars.loc[cars['Origin'] == 'Europe']
 
-# print("NEWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
-# print(ucars)
+#make new list and try to feed the values into chart
+carlist = []
+print("*********************************************************************")
+for i in ucars['Displacement']:
+    carlist.append(i)
 
-# df = ucars['Miles_per_Gallon']
-# df2 = ucars['Horsepower']
 
+df2 = carlist
 #GOOOODDDD COOOODDEEE
-df = cars['Miles_per_Gallon']
-df2 = cars['Horsepower']
+df = ucars['Miles_per_Gallon']
+# df2 = cars['Horsepower']
 #GOOOODDDD COOOODDEEE ^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -40,28 +43,27 @@ df2 = cars['Horsepower']
 progress_bar = st.progress(50)
 status_text = st.empty()
 chart = st.line_chart(df)
-# chart = st.line_chart(df, 500,1000)
-# chart = st.line_chart(np.random.randn(10, 2))
+
 
 for i in range(100):
     # Update progress bar.
     progress_bar.progress(i + 1)
 
     #print(cars)
+    # for i in jcars:
     for i in cars:
-        print(i)
+        # print(jcars['Miles_per_Gallon'])
         
         new_rows= df2
         # new_rows = {}
         # new_rows[i] = i['Acceleration']
-    # new_rows = np.random.randn(10, 2)
+   
 
     # Update status text.
     status_text.text(
-        'adding acceleration data: ')
+        'adding  data to chart yeah it takes awhile: ')
 
-    # status_text.text(
-    #     'The latest random number is: %s' % new_rows[-1, 1])
+   
 
     # Append data to the chart.
     chart.add_rows(new_rows)
