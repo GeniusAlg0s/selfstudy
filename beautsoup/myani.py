@@ -1,10 +1,7 @@
-import matplotlib.pyplot as plt
-import numpy as np
+
 import streamlit as st
 import time
-import altair as alt
 from vega_datasets import data
-import pandas as pd
 from PIL import Image
 
 st.title('SELF STUDY')
